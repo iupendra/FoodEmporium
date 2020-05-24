@@ -1,0 +1,34 @@
+[
+  {
+    "cuisineTypeId": 1,
+    "cuisineName": "Thai"
+  },
+  {
+    "cuisineTypeId": 2,
+    "cuisineName": "Indian"
+  },
+  {
+    "cuisineTypeId": 3,
+    "cuisineName": "Italian"
+  },
+  {
+    "cuisineTypeId": 4,
+    "cuisineName": "Chinese"
+  },
+  {
+    "cuisineTypeId": 5,
+    "cuisineName": "Mexican"
+  },
+  {
+    "cuisineTypeId": 6,
+    "cuisineName": "Shusi"
+  },
+  {
+    "cuisineTypeId": 7,
+    "cuisineName": "Bergers"
+  },
+  {
+    "cuisineTypeId": 8,
+    "cuisineName": "Other"
+  }
+]

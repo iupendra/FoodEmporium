@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundwithwhite"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/topcart" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="109dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/top" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="150dp"
+                    android:layout_height="94dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/foodemplogo" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/resturantround"
+                android:gravity="center">
+
+                <LinearLayout
+
+                    android:id="@+id/linearheader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:weightSum="1">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtRestaurantName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="e Learning course "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:id="@+id/txtbookAtable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="BOOK A TABLE"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="25sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearheader"
+                    android:layout_marginBottom="35dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Booking with name:">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editBookingname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile number:">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginBottom="5dp"
+                            android:text="Table for:" />
+
+                        <!-- Spinner Element -->
+                        <Spinner
+                            android:id="@+id/spinnerNoOfGusts"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Date:"
+                        android:maxLength="10">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editDateandtime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="datetime"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dip">
+
+                        <!-- Text Label -->
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginBottom="5dp"
+                            android:text="Time:" />
+
+                        <!-- Spinner Element -->
+                        <Spinner
+                            android:id="@+id/spinnerTimeSlot"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Message:"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="100">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editshortmesage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textLongMessage" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnConfirmBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttonbackground"
+                android:text="Confirm Booking"
+                android:textColor="@color/colorWhite"></Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <include layout="@layout/bottomnavview" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
